@@ -41,15 +41,16 @@ You can download the latest version of the stand-alone program [from here](https
 
 ![8](https://user-images.githubusercontent.com/35072497/101855205-106dce00-3b31-11eb-8e3d-ee7d04a86977.gif)
 ## Basic Information
-Note that the program is always working with the following filenames
+Note that the program is always working with the following filenames:
 |Filename| Purpose |Directory|
 |--|--|--|
-| test.avl | Geometry File | 
-| test.mas | Mass File |
-| test.run | Run File |
-
+| test.avl | Geometry File | Root*
+| test.mas | Mass File | Root*
+| test.run | Run File | Root*
+*Root is where the main executable file is stored
+So, it is really important to move files to another location or rename them after you are done working with the test.avl or test.mass or test.run files. Otherwise, the prog
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MzU2OTExMCwtMTM5NDI4NjIyMCwtMT
+eyJoaXN0b3J5IjpbLTcyMTYyMzI0MCwtMTM5NDI4NjIyMCwtMT
 A2MDk3Mzk4NywtNzM4MjMzMjE5LC0xOTM0MDk0NDAyLDEyNDk3
 NTQ4NzEsNzI4NzIzMDU0XX0=
 -->
