@@ -56,15 +56,16 @@ So, it is really important to *move files to another location or rename them aft
 
 **Structure**
 When using this program to generate/edit .avl files, it is essential to follow the structure below.
-
 +-AVL template
- |-Surface template
- |--Section template
- |--Control template
+   |-Surface template
+   |--Section template
+   |--Control template
 *Each surface needs at least 2 sections to be loaded, otherwise the program freezes
 *Make sure when you insert surfaces, change Xle, Yle, Zle values so that the plane can be created and does not have a 0 surface area
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg0NTI3MDAzLC0xMzk0Mjg2MjIwLC0xMD
+eyJoaXN0b3J5IjpbODI3MDg0NzQ1LC0xMzk0Mjg2MjIwLC0xMD
 YwOTczOTg3LC03MzgyMzMyMTksLTE5MzQwOTQ0MDIsMTI0OTc1
 NDg3MSw3Mjg3MjMwNTRdfQ==
 -->
