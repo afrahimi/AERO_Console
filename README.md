@@ -60,12 +60,14 @@ When using this program to generate/edit .avl files, it is essential to follow t
    |-Surface template
    |--Section template
    |--Control template
-*Each surface needs at least 2 sections to be loaded, otherwise the program freezes
-*Make sure when you insert surfaces, change Xle, Yle, Zle values so that the plane can be created and does not have a 0 surface area
+
+This means that the first element is the AVL template, next you have to add a surface and in each surface you can have as many sections (minimum of 2) and in each section you can add control e
+- Each surface needs at least 2 sections to be loaded, otherwise the program freezes
+- Make sure when you insert surfaces, change Xle, Yle, Zle values so that the plane can be created and does not have a 0 surface area
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI3MDg0NzQ1LC0xMzk0Mjg2MjIwLC0xMD
-YwOTczOTg3LC03MzgyMzMyMTksLTE5MzQwOTQ0MDIsMTI0OTc1
-NDg3MSw3Mjg3MjMwNTRdfQ==
+eyJoaXN0b3J5IjpbLTE4NzIwMDM4MTksODI3MDg0NzQ1LC0xMz
+k0Mjg2MjIwLC0xMDYwOTczOTg3LC03MzgyMzMyMTksLTE5MzQw
+OTQ0MDIsMTI0OTc1NDg3MSw3Mjg3MjMwNTRdfQ==
 -->
