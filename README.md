@@ -35,8 +35,11 @@ You can download the latest version of the stand-alone program [from here](https
 ![5](https://user-images.githubusercontent.com/35072497/101852381-83744600-3b2b-11eb-879b-e5f6da721ad3.gif)
  - Quick 3D Geometry view
  ![6](https://user-images.githubusercontent.com/35072497/101852572-faa9da00-3b2b-11eb-8160-1aee0ecdcf84.gif)
+ - Live node highlighter
+ ![7](https://user-images.githubusercontent.com/35072497/101855084-dc92a880-3b30-11eb-96b5-78ac8cfaa247.gif)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjA5NzM5ODcsLTczODIzMzIxOSwtMT
-kzNDA5NDQwMiwxMjQ5NzU0ODcxLDcyODcyMzA1NF19
+eyJoaXN0b3J5IjpbMTU0MjAwMjgwOCwtMTA2MDk3Mzk4NywtNz
+M4MjMzMjE5LC0xOTM0MDk0NDAyLDEyNDk3NTQ4NzEsNzI4NzIz
+MDU0XX0=
 -->
