@@ -29,6 +29,7 @@ Partial Class frmGeometry
         Me.lblCursor = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btnEditor = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.btnTrefftz = New System.Windows.Forms.ToolStripButton()
         Me.btnHelp = New System.Windows.Forms.ToolStripButton()
         Me.btnClear = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
@@ -42,7 +43,6 @@ Partial Class frmGeometry
         Me.RunTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.SeparatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnTrefftz = New System.Windows.Forms.ToolStripButton()
         Me.btnTest = New System.Windows.Forms.ToolStripButton()
         Me.btnSaveView = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
@@ -75,6 +75,7 @@ Partial Class frmGeometry
         Me.btnZoomout = New System.Windows.Forms.ToolStripButton()
         Me.btnBasefontplus = New System.Windows.Forms.ToolStripButton()
         Me.btnBasefontminus = New System.Windows.Forms.ToolStripButton()
+        Me.btnDisplay = New System.Windows.Forms.ToolStripButton()
         CType(Me.pxy, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -139,6 +140,16 @@ Partial Class frmGeometry
         Me.ToolStrip1.Size = New System.Drawing.Size(979, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'btnTrefftz
+        '
+        Me.btnTrefftz.AutoToolTip = False
+        Me.btnTrefftz.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnTrefftz.Image = CType(resources.GetObject("btnTrefftz.Image"), System.Drawing.Image)
+        Me.btnTrefftz.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnTrefftz.Name = "btnTrefftz"
+        Me.btnTrefftz.Size = New System.Drawing.Size(75, 22)
+        Me.btnTrefftz.Text = "Trefftz Plane"
         '
         'btnHelp
         '
@@ -227,16 +238,6 @@ Partial Class frmGeometry
         Me.SeparatorToolStripMenuItem.Name = "SeparatorToolStripMenuItem"
         Me.SeparatorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SeparatorToolStripMenuItem.Text = "Separator"
-        '
-        'btnTrefftz
-        '
-        Me.btnTrefftz.AutoToolTip = False
-        Me.btnTrefftz.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnTrefftz.Image = CType(resources.GetObject("btnTrefftz.Image"), System.Drawing.Image)
-        Me.btnTrefftz.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnTrefftz.Name = "btnTrefftz"
-        Me.btnTrefftz.Size = New System.Drawing.Size(75, 22)
-        Me.btnTrefftz.Text = "Trefftz Plane"
         '
         'btnTest
         '
@@ -441,7 +442,7 @@ Partial Class frmGeometry
         Me.txt3.Paddings = New System.Windows.Forms.Padding(0)
         Me.txt3.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt3.ServiceColors = CType(resources.GetObject("txt3.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
-        Me.txt3.Size = New System.Drawing.Size(150, 150)
+        Me.txt3.Size = New System.Drawing.Size(136, 153)
         Me.txt3.TabIndex = 2
         Me.txt3.Zoom = 100
         '
@@ -479,6 +480,7 @@ Partial Class frmGeometry
         Me.tlp1.RowCount = 2
         Me.tlp1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tlp1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tlp1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tlp1.Size = New System.Drawing.Size(374, 381)
         Me.tlp1.TabIndex = 5
         '
@@ -498,7 +500,7 @@ Partial Class frmGeometry
         '
         'ToolStrip2
         '
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnZoomin, Me.btnZoomout, Me.btnBasefontplus, Me.btnBasefontminus})
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnZoomin, Me.btnZoomout, Me.btnBasefontplus, Me.btnBasefontminus, Me.btnDisplay})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 25)
         Me.ToolStrip2.Name = "ToolStrip2"
         Me.ToolStrip2.Size = New System.Drawing.Size(979, 25)
@@ -542,6 +544,15 @@ Partial Class frmGeometry
         Me.btnBasefontminus.Name = "btnBasefontminus"
         Me.btnBasefontminus.Size = New System.Drawing.Size(40, 22)
         Me.btnBasefontminus.Text = "Font-"
+        '
+        'btnDisplay
+        '
+        Me.btnDisplay.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnDisplay.Image = CType(resources.GetObject("btnDisplay.Image"), System.Drawing.Image)
+        Me.btnDisplay.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnDisplay.Name = "btnDisplay"
+        Me.btnDisplay.Size = New System.Drawing.Size(102, 22)
+        Me.btnDisplay.Text = "Show Editor Only"
         '
         'frmGeometry
         '
@@ -635,4 +646,5 @@ Partial Class frmGeometry
     Friend WithEvents btnZoomout As ToolStripButton
     Friend WithEvents btnBasefontplus As ToolStripButton
     Friend WithEvents btnBasefontminus As ToolStripButton
+    Friend WithEvents btnDisplay As ToolStripButton
 End Class

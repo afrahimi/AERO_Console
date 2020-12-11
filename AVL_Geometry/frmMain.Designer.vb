@@ -159,6 +159,7 @@ Partial Class frmMain
         Me.btnXFoil.Name = "btnXFoil"
         Me.btnXFoil.Size = New System.Drawing.Size(37, 22)
         Me.btnXFoil.Text = "XFoil"
+        Me.btnXFoil.Visible = False
         '
         'btnDesigner
         '

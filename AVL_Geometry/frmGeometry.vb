@@ -359,11 +359,13 @@ Public Class frmGeometry
         End While
         Threading.Thread.Sleep(200) 'wait for window to fully open
         'Dim proc = Process.GetProcessesByName(procName)(0)
+        Dim rectw = New User32.Rect()
         Dim rect = New User32.Rect()
         Dim cpoint = New User32.POINTAPI()
-        'User32.GetWindowRect(proc.MainWindowHandle, rect)
+        User32.GetWindowRect(proc.MainWindowHandle, rectw)
         User32.GetClientRect(proc.MainWindowHandle, rect)
         User32.ClientToScreen(proc.MainWindowHandle, cpoint)
+        User32.SetWindowPos(proc.MainWindowHandle, User32.HWND_TOPMOST, rectw.left, rectw.top, rectw.right - rectw.left, rectw.bottom - rectw.top, User32.SWP_SHOWWINDOW)
         Dim width As Integer = rect.right - rect.left
         Dim height As Integer = rect.bottom - rect.top
         'Dim bmp = New Bitmap(width, height, PixelFormat.Format32bppArgb)
@@ -411,6 +413,15 @@ Public Class frmGeometry
         <DllImport("user32.dll")>
         Public Shared Function ClientToScreen(ByVal hWnd As IntPtr, ByRef lpPoint As POINTAPI) As Boolean
         End Function
+        <DllImport("user32.dll")>
+        Public Shared Function SetWindowPos(ByVal hWnd As IntPtr, ByVal hWndInsertAfter As IntPtr, ByVal X As Integer, ByVal Y As Integer, ByVal cx As Integer, ByVal cy As Integer, ByVal uFlags As UInteger) As Boolean
+        End Function
+        Public Shared ReadOnly HWND_TOPMOST As IntPtr = New IntPtr(-1)
+        Public Const SWP_NOSIZE As UInt32 = &H1
+        Public Const SWP_NOMOVE As UInt32 = &H2
+        Public Const SWP_SHOWWINDOW As UInt32 = &H40
+
+
     End Class
 
 
@@ -966,11 +977,13 @@ Ctrl+I - forced AutoIndentChars of current line", vbOKOnly, "Editor Shortcuts")
 
     Private Sub bg1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles bg1.DoWork
         If (tc1.SelectedTab.Name = "tabSide") Then
+            On Error GoTo errHandler
             'Try
             'XY plane========================================================================
             Dim BMP As Bitmap = New Bitmap(pxy.Width, pxy.Height)
             Dim G As Graphics = Graphics.FromImage(BMP)
             G.SmoothingMode = SmoothingMode.AntiAlias
+            G.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias
             Dim tickFont As Font = New Font(FontFamily.GenericMonospace.Name, Single.Parse(baseFontsize / (gridnumber / 10)), FontStyle.Regular)
             Dim axisFont As Font = New Font(FontFamily.GenericSerif.Name, Single.Parse(12), FontStyle.Regular)
             gridstep = pxy.Width / gridnumber
@@ -1093,6 +1106,8 @@ Ctrl+I - forced AutoIndentChars of current line", vbOKOnly, "Editor Shortcuts")
             'XZ plane========================================================================
             BMP = New Bitmap(pxz.Width, pxz.Height)
             G = Graphics.FromImage(BMP)
+            G.SmoothingMode = SmoothingMode.AntiAlias
+            G.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias
             gridstep = pxz.Width / gridnumber
             x0 = (pxz.Width / 2) + xoffset
             Dim z0 As Integer = (pxz.Height / 2) + zoffset
@@ -1208,6 +1223,8 @@ Ctrl+I - forced AutoIndentChars of current line", vbOKOnly, "Editor Shortcuts")
             'YZ plane========================================================================
             BMP = New Bitmap(pyz.Width, pyz.Height)
             G = Graphics.FromImage(BMP)
+            G.SmoothingMode = SmoothingMode.AntiAlias
+            G.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias
             gridstep = pyz.Width / gridnumber
             y0 = (pxz.Width / 2) + yoffset
             z0 = (pxz.Height / 2) + zoffset
@@ -1403,15 +1420,20 @@ Ctrl+I - forced AutoIndentChars of current line", vbOKOnly, "Editor Shortcuts")
 
 
             p3d.Image = BMP
+            Exit Sub
         End If
         'Catch e As Exception
         'MsgBox("DrawInPicture Error: " + e.GetBaseException.Message)
         'End Try
+errHandler:
+        bg1.CancelAsync()
     End Sub
 
     Private Sub btnZoomin_Click(sender As Object, e As EventArgs) Handles btnZoomin.Click
-        gridnumber -= 1
-        drawAxes()
+        If gridnumber > 1 Then
+            gridnumber -= 1
+            drawAxes()
+        End If
     End Sub
 
     Private Sub btnZoomout_Click(sender As Object, e As EventArgs) Handles btnZoomout.Click
@@ -1432,5 +1454,36 @@ Ctrl+I - forced AutoIndentChars of current line", vbOKOnly, "Editor Shortcuts")
 
     Private Sub frmGeometry_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         drawAxes()
+    End Sub
+
+    Private Sub btnDisplay_Click(sender As Object, e As EventArgs) Handles btnDisplay.Click
+        Select Case btnDisplay.Text.ToLower()
+            Case "Show Editor Only".ToLower()
+                btnDisplay.Text = "Show Editor and XY Plane Only"
+                tlp1.Controls.Remove(pxy)
+                tlp1.Controls.Remove(pyz)
+                tlp1.Controls.Remove(pxz)
+                tlp1.SetRowSpan(txt3, 2)
+                tlp1.SetColumnSpan(txt3, 2)
+            Case "Show Editor and XY Plane Only".ToLower()
+                btnDisplay.Text = "Show Editor and All Planes"
+                tlp1.SetRowSpan(txt3, 2)
+                tlp1.SetColumnSpan(txt3, 1)
+                tlp1.SetRowSpan(pxy, 2)
+                tlp1.SetColumnSpan(pxy, 1)
+                tlp1.Controls.Add(pxy, 1, 0)
+                pxy.Dock = DockStyle.Fill
+            Case "Show Editor and All Planes".ToLower()
+                btnDisplay.Text = "Show Editor Only"
+                tlp1.SetRowSpan(txt3, 1)
+                tlp1.SetColumnSpan(txt3, 1)
+                tlp1.SetRowSpan(pxy, 1)
+                tlp1.SetColumnSpan(pxy, 1)
+                tlp1.Controls.Add(pyz, 0, 1)
+                tlp1.Controls.Add(pxz, 1, 1)
+                pxz.Dock = DockStyle.Fill
+                pyz.Dock = DockStyle.Fill
+
+        End Select
     End Sub
 End Class
