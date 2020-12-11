@@ -16,7 +16,8 @@ You can download the latest version of the stand-alone program [from here](https
  2. Open the .exe file and accept to run it if you get a message that it is not from a trusted publisher. It is because I am not a registered published with Microsoft and Windows.
  3. The program will unpack some required files to run locally in the same location as it is stored and will show the main window for you.
 
+![main_window](https://user-images.githubusercontent.com/35072497/101848794-5bcdaf80-3b24-11eb-9f4d-15fa1de50791.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzQwOTQ0MDIsMTI0OTc1NDg3MSw3Mj
-g3MjMwNTRdfQ==
+eyJoaXN0b3J5IjpbLTE3MjYzNTYwMjcsLTE5MzQwOTQ0MDIsMT
+I0OTc1NDg3MSw3Mjg3MjMwNTRdfQ==
 -->
