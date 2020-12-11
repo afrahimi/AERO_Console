@@ -25,8 +25,8 @@ You can download the latest version of the stand-alone program [from here](https
  ![1](https://user-images.githubusercontent.com/35072497/101849098-f8904d00-3b24-11eb-83df-f93a114a16e4.gif)
   
  - Graphical User Interface 
-
+![2](https://user-images.githubusercontent.com/35072497/101849194-32615380-3b25-11eb-8bb0-c77bb1e0b402.gif)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NTkyMTE1OCwtMTkzNDA5NDQwMiwxMj
-Q5NzU0ODcxLDcyODcyMzA1NF19
+eyJoaXN0b3J5IjpbMzA1MTc1NzUwLC0xOTM0MDk0NDAyLDEyND
+k3NTQ4NzEsNzI4NzIzMDU0XX0=
 -->
