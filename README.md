@@ -27,9 +27,10 @@ You can download the latest version of the stand-alone program [from here](https
  - Graphical User Interface 
 ![2](https://user-images.githubusercontent.com/35072497/101849194-32615380-3b25-11eb-8bb0-c77bb1e0b402.gif)
  - Quick add of geometry, mass or run file
- 
+ ![3](https://user-images.githubusercontent.com/35072497/101849408-a1d74300-3b25-11eb-9185-87ce4890b62e.gif)
+ - Tooltip help for each element in the 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MjA5Mzc0OCwtMTkzNDA5NDQwMiwxMj
-Q5NzU0ODcxLDcyODcyMzA1NF19
+eyJoaXN0b3J5IjpbLTIxMTY5MDUzODUsLTE5MzQwOTQ0MDIsMT
+I0OTc1NDg3MSw3Mjg3MjMwNTRdfQ==
 -->
