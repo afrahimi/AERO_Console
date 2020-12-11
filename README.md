@@ -40,9 +40,10 @@ You can download the latest version of the stand-alone program [from here](https
  - Multiple Layouts
 
 ![8](https://user-images.githubusercontent.com/35072497/101855205-106dce00-3b31-11eb-8e3d-ee7d04a86977.gif)
-
+## Basic Information
+Note that the program is always working with the fol
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTQyODYyMjAsLTEwNjA5NzM5ODcsLT
-czODIzMzIxOSwtMTkzNDA5NDQwMiwxMjQ5NzU0ODcxLDcyODcy
-MzA1NF19
+eyJoaXN0b3J5IjpbLTcxNTg0NjAzNCwtMTM5NDI4NjIyMCwtMT
+A2MDk3Mzk4NywtNzM4MjMzMjE5LC0xOTM0MDk0NDAyLDEyNDk3
+NTQ4NzEsNzI4NzIzMDU0XX0=
 -->
