@@ -21,8 +21,13 @@ You can download the latest version of the stand-alone program [from here](https
 
 ## Features
 
+ - Colored and Indented AVL file codes
+ 
+ 
+ 
+ - Graphical User Interface 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NzE1ODc1MiwtMTkzNDA5NDQwMiwxMj
-Q5NzU0ODcxLDcyODcyMzA1NF19
+eyJoaXN0b3J5IjpbLTE4MTc0NTk1NzIsLTE5MzQwOTQ0MDIsMT
+I0OTc1NDg3MSw3Mjg3MjMwNTRdfQ==
 -->
