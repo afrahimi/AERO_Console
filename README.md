@@ -22,12 +22,11 @@ You can download the latest version of the stand-alone program [from here](https
 ## Features
 
  - Colored and Indented AVL file codes
- 
- 
- 
+ ![1](https://user-images.githubusercontent.com/35072497/101849098-f8904d00-3b24-11eb-83df-f93a114a16e4.gif)
+  
  - Graphical User Interface 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTc0NTk1NzIsLTE5MzQwOTQ0MDIsMT
-I0OTc1NDg3MSw3Mjg3MjMwNTRdfQ==
+eyJoaXN0b3J5IjpbMTc4NTkyMTE1OCwtMTkzNDA5NDQwMiwxMj
+Q5NzU0ODcxLDcyODcyMzA1NF19
 -->
