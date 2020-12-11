@@ -43,6 +43,7 @@ You can download the latest version of the stand-alone program [from here](https
 ## Basic Information
 
 **FileNames**
+
 Note that the program is always working with the following filenames:
 |Filename| Purpose |Directory|
 |--|--|--|
@@ -55,6 +56,7 @@ Note that the program is always working with the following filenames:
 So, it is really important to *move files to another location or rename them after you are done working with* **the test.avl** or **test.mass** or **test.run** files. Otherwise, the program will override the existing files and you may lose your work.
 
 **Structure**
+
 When using this program to generate/edit .avl files, it is essential to follow the structure below.
 +-AVL template
    |-Surface template
@@ -67,7 +69,7 @@ This means that the first element is the AVL template, next you have to add a su
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMzI0Njk5MSw4MjcwODQ3NDUsLTEzOT
-QyODYyMjAsLTEwNjA5NzM5ODcsLTczODIzMzIxOSwtMTkzNDA5
-NDQwMiwxMjQ5NzU0ODcxLDcyODcyMzA1NF19
+eyJoaXN0b3J5IjpbOTk2OTEyNjkxLDgyNzA4NDc0NSwtMTM5ND
+I4NjIyMCwtMTA2MDk3Mzk4NywtNzM4MjMzMjE5LC0xOTM0MDk0
+NDAyLDEyNDk3NTQ4NzEsNzI4NzIzMDU0XX0=
 -->
