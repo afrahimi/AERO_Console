@@ -51,9 +51,9 @@ Note that the program is always working with the following filenames:
 | test.run | Run File | Root*
 *Root is where the main executable file is stored
 
-So, it is really important to move files to another location or rename them after you are done working with the test.avl or test.mass or test.run files. Otherwise, the program will override the existing files and you may lose your work.
+So, it is really important to *move files to another location or rename them after you are done working with* **the test.avl** or **test.mass** or **test.run** files. Otherwise, the program will override the existing files and you may lose your work.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMjI0Mjc1MSwtMTM5NDI4NjIyMCwtMT
-A2MDk3Mzk4NywtNzM4MjMzMjE5LC0xOTM0MDk0NDAyLDEyNDk3
-NTQ4NzEsNzI4NzIzMDU0XX0=
+eyJoaXN0b3J5IjpbOTk3OTQ0NzE1LC0xMzk0Mjg2MjIwLC0xMD
+YwOTczOTg3LC03MzgyMzMyMTksLTE5MzQwOTQ0MDIsMTI0OTc1
+NDg3MSw3Mjg3MjMwNTRdfQ==
 -->
