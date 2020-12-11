@@ -61,13 +61,13 @@ When using this program to generate/edit .avl files, it is essential to follow t
    |--Section template
    |--Control template
 
-This means that the first element is the AVL template, next you have to add a surface and in each surface you can have as many sections (minimum of 2) and in each section you can add control e
+This means that the first element is the AVL template, next you have to add a surface and in each surface you can have as many sections (minimum of 2) and in each section you can add control elements. But the nesting has to be in this order, otherwise the geometry will be corrupted and calculations will be incorrect.
 - Each surface needs at least 2 sections to be loaded, otherwise the program freezes
 - Make sure when you insert surfaces, change Xle, Yle, Zle values so that the plane can be created and does not have a 0 surface area
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzIwMDM4MTksODI3MDg0NzQ1LC0xMz
-k0Mjg2MjIwLC0xMDYwOTczOTg3LC03MzgyMzMyMTksLTE5MzQw
-OTQ0MDIsMTI0OTc1NDg3MSw3Mjg3MjMwNTRdfQ==
+eyJoaXN0b3J5IjpbMTkwMzI0Njk5MSw4MjcwODQ3NDUsLTEzOT
+QyODYyMjAsLTEwNjA5NzM5ODcsLTczODIzMzIxOSwtMTkzNDA5
+NDQwMiwxMjQ5NzU0ODcxLDcyODcyMzA1NF19
 -->
