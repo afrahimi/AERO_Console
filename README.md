@@ -15,9 +15,14 @@ You can download the latest version of the stand-alone program [from here](https
  1. Make sure the file is in a folder that can read/write files to your computer storage without additional permissions.
  2. Open the .exe file and accept to run it if you get a message that it is not from a trusted publisher. It is because I am not a registered published with Microsoft and Windows.
  3. The program will unpack some required files to run locally in the same location as it is stored and will show the main window for you.
+ 4. You should see the following screen or a slightly different version of it.
 
 ![main_window](https://user-images.githubusercontent.com/35072497/101848794-5bcdaf80-3b24-11eb-9f4d-15fa1de50791.png)
+
+## Features
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjYzNTYwMjcsLTE5MzQwOTQ0MDIsMT
-I0OTc1NDg3MSw3Mjg3MjMwNTRdfQ==
+eyJoaXN0b3J5IjpbMTk3NzE1ODc1MiwtMTkzNDA5NDQwMiwxMj
+Q5NzU0ODcxLDcyODcyMzA1NF19
 -->
