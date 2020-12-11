@@ -34,9 +34,9 @@ You can download the latest version of the stand-alone program [from here](https
  - Quick Trefftz view
 ![5](https://user-images.githubusercontent.com/35072497/101852381-83744600-3b2b-11eb-879b-e5f6da721ad3.gif)
  - Quick 3D Geometry view
- 
+ ![6](https://user-images.githubusercontent.com/35072497/101852572-faa9da00-3b2b-11eb-8160-1aee0ecdcf84.gif)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NDM0MzIxMSwtNzM4MjMzMjE5LC0xOT
-M0MDk0NDAyLDEyNDk3NTQ4NzEsNzI4NzIzMDU0XX0=
+eyJoaXN0b3J5IjpbLTEwNjA5NzM5ODcsLTczODIzMzIxOSwtMT
+kzNDA5NDQwMiwxMjQ5NzU0ODcxLDcyODcyMzA1NF19
 -->
