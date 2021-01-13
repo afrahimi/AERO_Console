@@ -295,6 +295,7 @@ Public Class frmMain
         fd1.Font = txtLog.Font
         If (fd1.ShowDialog() = DialogResult.OK) Then
             txtLog.Font = fd1.Font
+            txtCommand.Font = fd1.Font
         End If
     End Sub
 End Class
