@@ -291,5 +291,10 @@ Public Class frmMain
         AirplaneDesignToolStripMenuItem.PerformClick()
     End Sub
 
-
+    Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
+        fd1.Font = txtLog.Font
+        If (fd1.ShowDialog() = DialogResult.OK) Then
+            txtLog.Font = fd1.Font
+        End If
+    End Sub
 End Class

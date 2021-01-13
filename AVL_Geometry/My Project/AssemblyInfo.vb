@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("This GUI is made available by Dr. Afshin Rahimi from the University of Windsor in Windsor, ON, Canada for students in the course MECH-4671 Aerodynamics and Performance to explore Mark Drela's AVL and Xfoil software in a friendlier interface and work through their assignments and project.")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("AERO Console")>
-<Assembly: AssemblyCopyright("Copyright ©  2019")>
+<Assembly: AssemblyCopyright("Copyright ©  2020")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.0.0.2")>
+<Assembly: AssemblyFileVersion("1.0.0.2")>

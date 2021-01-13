@@ -38,6 +38,9 @@ Partial Class frmMain
         Me.btnAVL = New System.Windows.Forms.ToolStripButton()
         Me.btnXFoil = New System.Windows.Forms.ToolStripButton()
         Me.btnDesigner = New System.Windows.Forms.ToolStripButton()
+        Me.DisplayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.fd1 = New System.Windows.Forms.FontDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -71,7 +74,7 @@ Partial Class frmMain
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.DisplayToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1026, 24)
@@ -171,6 +174,19 @@ Partial Class frmMain
         Me.btnDesigner.Size = New System.Drawing.Size(112, 22)
         Me.btnDesigner.Text = "Geometry Designer"
         '
+        'DisplayToolStripMenuItem
+        '
+        Me.DisplayToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem})
+        Me.DisplayToolStripMenuItem.Name = "DisplayToolStripMenuItem"
+        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.DisplayToolStripMenuItem.Text = "Display"
+        '
+        'FontToolStripMenuItem
+        '
+        Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
+        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FontToolStripMenuItem.Text = "Font"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -208,4 +224,7 @@ Partial Class frmMain
     Friend WithEvents btnAVL As ToolStripButton
     Friend WithEvents btnXFoil As ToolStripButton
     Friend WithEvents btnDesigner As ToolStripButton
+    Friend WithEvents DisplayToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents fd1 As FontDialog
 End Class
