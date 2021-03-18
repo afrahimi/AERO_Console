@@ -29,7 +29,6 @@ Partial Class frmGeometry
         Me.lblCursor = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btnEditor = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnTrefftz = New System.Windows.Forms.ToolStripButton()
         Me.btnHelp = New System.Windows.Forms.ToolStripButton()
         Me.btnClear = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
@@ -43,19 +42,9 @@ Partial Class frmGeometry
         Me.RunTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.SeparatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnTest = New System.Windows.Forms.ToolStripButton()
-        Me.btnSaveView = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnHide = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btnLoadR = New System.Windows.Forms.ToolStripButton()
-        Me.btnSaveR = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btnLoadM = New System.Windows.Forms.ToolStripButton()
-        Me.btnSaveM = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btnLoadG = New System.Windows.Forms.ToolStripButton()
-        Me.btnSaveG = New System.Windows.Forms.ToolStripButton()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.tc1 = New System.Windows.Forms.TabControl()
         Me.tab3D = New System.Windows.Forms.TabPage()
@@ -76,6 +65,19 @@ Partial Class frmGeometry
         Me.btnBasefontplus = New System.Windows.Forms.ToolStripButton()
         Me.btnBasefontminus = New System.Windows.Forms.ToolStripButton()
         Me.btnDisplay = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripDropDownButton2 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.btnSaveG = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnLoadG = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnSaveM = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnLoadM = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnSaveR = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnLoadR = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripDropDownButton3 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.btnTrefftz = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnTest = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnSaveView = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.pxy, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -134,22 +136,13 @@ Partial Class frmGeometry
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnTrefftz, Me.btnHelp, Me.btnClear, Me.ToolStripDropDownButton1, Me.btnTest, Me.btnSaveView, Me.ToolStripSeparator4, Me.btnHide, Me.ToolStripSeparator3, Me.btnLoadR, Me.btnSaveR, Me.ToolStripButton2, Me.btnLoadM, Me.btnSaveM, Me.ToolStripButton1, Me.btnLoadG, Me.btnSaveG})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnHelp, Me.btnClear, Me.ToolStripDropDownButton1, Me.ToolStripDropDownButton3, Me.ToolStripSeparator4, Me.btnHide, Me.ToolStripSeparator3, Me.ToolStripDropDownButton2})
+        Me.ToolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(979, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'btnTrefftz
-        '
-        Me.btnTrefftz.AutoToolTip = False
-        Me.btnTrefftz.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnTrefftz.Image = CType(resources.GetObject("btnTrefftz.Image"), System.Drawing.Image)
-        Me.btnTrefftz.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnTrefftz.Name = "btnTrefftz"
-        Me.btnTrefftz.Size = New System.Drawing.Size(75, 22)
-        Me.btnTrefftz.Text = "Trefftz Plane"
         '
         'btnHelp
         '
@@ -185,79 +178,59 @@ Partial Class frmGeometry
         'AVLTemplateToolStripMenuItem
         '
         Me.AVLTemplateToolStripMenuItem.Name = "AVLTemplateToolStripMenuItem"
-        Me.AVLTemplateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AVLTemplateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AVLTemplateToolStripMenuItem.Text = "AVL Template"
         '
         'SurfaceToolStripMenuItem
         '
         Me.SurfaceToolStripMenuItem.Name = "SurfaceToolStripMenuItem"
-        Me.SurfaceToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SurfaceToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SurfaceToolStripMenuItem.Text = "Surface"
         '
         'SectionToolStripMenuItem
         '
         Me.SectionToolStripMenuItem.Name = "SectionToolStripMenuItem"
-        Me.SectionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SectionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SectionToolStripMenuItem.Text = "Section"
         '
         'ControlToolStripMenuItem
         '
         Me.ControlToolStripMenuItem.Name = "ControlToolStripMenuItem"
-        Me.ControlToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ControlToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ControlToolStripMenuItem.Text = "Control"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
         '
         'MassTemplateToolStripMenuItem
         '
         Me.MassTemplateToolStripMenuItem.Name = "MassTemplateToolStripMenuItem"
-        Me.MassTemplateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MassTemplateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MassTemplateToolStripMenuItem.Text = "Mass Template"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
         '
         'RunTemplateToolStripMenuItem
         '
         Me.RunTemplateToolStripMenuItem.Name = "RunTemplateToolStripMenuItem"
-        Me.RunTemplateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RunTemplateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.RunTemplateToolStripMenuItem.Text = "Run Template"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(177, 6)
         '
         'SeparatorToolStripMenuItem
         '
         Me.SeparatorToolStripMenuItem.Name = "SeparatorToolStripMenuItem"
-        Me.SeparatorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SeparatorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SeparatorToolStripMenuItem.Text = "Separator"
-        '
-        'btnTest
-        '
-        Me.btnTest.AutoToolTip = False
-        Me.btnTest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnTest.Image = CType(resources.GetObject("btnTest.Image"), System.Drawing.Image)
-        Me.btnTest.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnTest.Name = "btnTest"
-        Me.btnTest.Size = New System.Drawing.Size(91, 22)
-        Me.btnTest.Text = "View Geometry"
-        '
-        'btnSaveView
-        '
-        Me.btnSaveView.AutoToolTip = False
-        Me.btnSaveView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnSaveView.Image = CType(resources.GetObject("btnSaveView.Image"), System.Drawing.Image)
-        Me.btnSaveView.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnSaveView.Name = "btnSaveView"
-        Me.btnSaveView.Size = New System.Drawing.Size(129, 22)
-        Me.btnSaveView.Text = "Save + View Geometry"
         '
         'ToolStripSeparator4
         '
@@ -280,78 +253,6 @@ Partial Class frmGeometry
         Me.ToolStripSeparator3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
-        '
-        'btnLoadR
-        '
-        Me.btnLoadR.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnLoadR.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnLoadR.Image = CType(resources.GetObject("btnLoadR.Image"), System.Drawing.Image)
-        Me.btnLoadR.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnLoadR.Name = "btnLoadR"
-        Me.btnLoadR.Size = New System.Drawing.Size(61, 22)
-        Me.btnLoadR.Text = "Load Run"
-        '
-        'btnSaveR
-        '
-        Me.btnSaveR.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnSaveR.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnSaveR.Image = CType(resources.GetObject("btnSaveR.Image"), System.Drawing.Image)
-        Me.btnSaveR.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnSaveR.Name = "btnSaveR"
-        Me.btnSaveR.Size = New System.Drawing.Size(59, 22)
-        Me.btnSaveR.Text = "Save Run"
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(6, 25)
-        '
-        'btnLoadM
-        '
-        Me.btnLoadM.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnLoadM.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnLoadM.Image = CType(resources.GetObject("btnLoadM.Image"), System.Drawing.Image)
-        Me.btnLoadM.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnLoadM.Name = "btnLoadM"
-        Me.btnLoadM.Size = New System.Drawing.Size(67, 22)
-        Me.btnLoadM.Text = "Load Mass"
-        '
-        'btnSaveM
-        '
-        Me.btnSaveM.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnSaveM.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnSaveM.Image = CType(resources.GetObject("btnSaveM.Image"), System.Drawing.Image)
-        Me.btnSaveM.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnSaveM.Name = "btnSaveM"
-        Me.btnSaveM.Size = New System.Drawing.Size(65, 22)
-        Me.btnSaveM.Text = "Save Mass"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(6, 25)
-        '
-        'btnLoadG
-        '
-        Me.btnLoadG.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnLoadG.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnLoadG.Image = CType(resources.GetObject("btnLoadG.Image"), System.Drawing.Image)
-        Me.btnLoadG.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnLoadG.Name = "btnLoadG"
-        Me.btnLoadG.Size = New System.Drawing.Size(60, 22)
-        Me.btnLoadG.Text = "Load AVL"
-        '
-        'btnSaveG
-        '
-        Me.btnSaveG.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnSaveG.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnSaveG.Image = CType(resources.GetObject("btnSaveG.Image"), System.Drawing.Image)
-        Me.btnSaveG.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnSaveG.Name = "btnSaveG"
-        Me.btnSaveG.Size = New System.Drawing.Size(58, 22)
-        Me.btnSaveG.Text = "Save AVL"
         '
         'SplitContainer1
         '
@@ -554,6 +455,91 @@ Partial Class frmGeometry
         Me.btnDisplay.Size = New System.Drawing.Size(102, 22)
         Me.btnDisplay.Text = "Show Editor Only"
         '
+        'ToolStripDropDownButton2
+        '
+        Me.ToolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripDropDownButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnSaveG, Me.btnLoadG, Me.ToolStripSeparator6, Me.btnSaveM, Me.btnLoadM, Me.ToolStripSeparator7, Me.btnSaveR, Me.btnLoadR})
+        Me.ToolStripDropDownButton2.Image = CType(resources.GetObject("ToolStripDropDownButton2.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton2.Name = "ToolStripDropDownButton2"
+        Me.ToolStripDropDownButton2.Size = New System.Drawing.Size(84, 22)
+        Me.ToolStripDropDownButton2.Text = "Component"
+        '
+        'btnSaveG
+        '
+        Me.btnSaveG.Name = "btnSaveG"
+        Me.btnSaveG.Size = New System.Drawing.Size(180, 22)
+        Me.btnSaveG.Text = "Save AVL"
+        '
+        'btnLoadG
+        '
+        Me.btnLoadG.Name = "btnLoadG"
+        Me.btnLoadG.Size = New System.Drawing.Size(180, 22)
+        Me.btnLoadG.Text = "Load AVL"
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(177, 6)
+        '
+        'btnSaveM
+        '
+        Me.btnSaveM.Name = "btnSaveM"
+        Me.btnSaveM.Size = New System.Drawing.Size(180, 22)
+        Me.btnSaveM.Text = "Save Mass"
+        '
+        'btnLoadM
+        '
+        Me.btnLoadM.Name = "btnLoadM"
+        Me.btnLoadM.Size = New System.Drawing.Size(180, 22)
+        Me.btnLoadM.Text = "Load Mass"
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(177, 6)
+        '
+        'btnSaveR
+        '
+        Me.btnSaveR.Name = "btnSaveR"
+        Me.btnSaveR.Size = New System.Drawing.Size(180, 22)
+        Me.btnSaveR.Text = "Save Run"
+        '
+        'btnLoadR
+        '
+        Me.btnLoadR.Name = "btnLoadR"
+        Me.btnLoadR.Size = New System.Drawing.Size(180, 22)
+        Me.btnLoadR.Text = "Load Run"
+        '
+        'ToolStripDropDownButton3
+        '
+        Me.ToolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripDropDownButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnTrefftz, Me.btnTest, Me.btnSaveView})
+        Me.ToolStripDropDownButton3.Image = CType(resources.GetObject("ToolStripDropDownButton3.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton3.Name = "ToolStripDropDownButton3"
+        Me.ToolStripDropDownButton3.Size = New System.Drawing.Size(45, 22)
+        Me.ToolStripDropDownButton3.Text = "View"
+        '
+        'btnTrefftz
+        '
+        Me.btnTrefftz.Name = "btnTrefftz"
+        Me.btnTrefftz.Size = New System.Drawing.Size(227, 22)
+        Me.btnTrefftz.Text = "Trefftz Plane"
+        '
+        'btnTest
+        '
+        Me.btnTest.Name = "btnTest"
+        Me.btnTest.Size = New System.Drawing.Size(227, 22)
+        Me.btnTest.Text = "Geometry"
+        '
+        'btnSaveView
+        '
+        Me.btnSaveView.Name = "btnSaveView"
+        Me.btnSaveView.Size = New System.Drawing.Size(227, 22)
+        Me.btnSaveView.Text = "Save AVL the show Geometry"
+        '
         'frmGeometry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -600,35 +586,24 @@ Partial Class frmGeometry
     Friend WithEvents lblCursor As ToolStripStatusLabel
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents btnSaveG As ToolStripButton
-    Friend WithEvents btnTest As ToolStripButton
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
     Friend WithEvents AVLTemplateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SurfaceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SectionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ControlToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents btnLoadG As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents SeparatorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnClear As ToolStripButton
     Friend WithEvents lblNote As Label
-    Friend WithEvents btnTrefftz As ToolStripButton
     Friend WithEvents btnHelp As ToolStripButton
-    Friend WithEvents btnSaveView As ToolStripButton
     Friend WithEvents txt3 As FastColoredTextBoxNS.FastColoredTextBox
     Friend WithEvents btnHide As ToolStripButton
-    Friend WithEvents btnSaveM As ToolStripButton
-    Friend WithEvents btnLoadM As ToolStripButton
     Friend WithEvents MassTemplateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents btnLoadR As ToolStripButton
-    Friend WithEvents btnSaveR As ToolStripButton
     Friend WithEvents RunTemplateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
-    Friend WithEvents ToolStripButton2 As ToolStripSeparator
-    Friend WithEvents ToolStripButton1 As ToolStripSeparator
     Friend WithEvents SplitContainer2 As SplitContainer
     Friend WithEvents pxz As PictureBox
     Friend WithEvents btnEditor As ToolStripStatusLabel
@@ -647,4 +622,17 @@ Partial Class frmGeometry
     Friend WithEvents btnBasefontplus As ToolStripButton
     Friend WithEvents btnBasefontminus As ToolStripButton
     Friend WithEvents btnDisplay As ToolStripButton
+    Friend WithEvents ToolStripDropDownButton2 As ToolStripDropDownButton
+    Friend WithEvents btnSaveG As ToolStripMenuItem
+    Friend WithEvents btnLoadG As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
+    Friend WithEvents btnSaveM As ToolStripMenuItem
+    Friend WithEvents btnLoadM As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
+    Friend WithEvents btnSaveR As ToolStripMenuItem
+    Friend WithEvents btnLoadR As ToolStripMenuItem
+    Friend WithEvents ToolStripDropDownButton3 As ToolStripDropDownButton
+    Friend WithEvents btnTrefftz As ToolStripMenuItem
+    Friend WithEvents btnTest As ToolStripMenuItem
+    Friend WithEvents btnSaveView As ToolStripMenuItem
 End Class

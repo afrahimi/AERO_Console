@@ -5,8 +5,6 @@ Imports System.Runtime.InteropServices
 Imports System.Text.RegularExpressions
 Imports System.Windows.Media.Media3D
 Imports FastColoredTextBoxNS
-Imports Ghostscript.NET
-Imports Ghostscript.NET.Rasterizer
 
 Public Class frmGeometry
     Dim xmax As Double = 10
@@ -92,6 +90,7 @@ Public Class frmGeometry
         'cmbPlane.Visible = False
         'ToolStripLabel1.Visible = False
         'btnReset.Visible = False
+        frmMain.SetAllControlsFont(Me.Controls, frmMain.systemFont)
         drawAxes()
         'loadTemplate()
 
@@ -123,8 +122,6 @@ Public Class frmGeometry
         Return result
     End Function
 
-    Private Sub p1_Click(sender As Object, e As EventArgs) Handles pxy.Click
-    End Sub
 
     Public Function anyHovered() As Boolean
         'Dim result As Boolean = False
@@ -221,53 +218,6 @@ Public Class frmGeometry
         drawAxes()
     End Sub
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSaveG.Click
-        Try
-            Dim f = Application.StartupPath + "\test.avl"
-            'MsgBox(TrimAll(txt3.Text))
-            File.WriteAllText(f, TrimAll(txt3.Text))
-        Catch er As Exception
-            MsgBox("Error: " + er.Message)
-            Try
-                frmMain.p.Kill()
-                frmMain.loadConsole()
-            Catch
-            End Try
-        End Try
-    End Sub
-
-    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnTest.Click
-        'btnSave_Click(sender, e)
-        Dim f = Application.StartupPath + "\test.avl"
-        With frmMain
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine("load " + f)
-            .p.StandardInput.WriteLine("oper")
-            .p.StandardInput.WriteLine("g")
-            '.p.StandardInput.WriteLine("k")
-            'SendKeys.Send("LLL")
-        End With
-
-        CaptureApplication("PltLib", "3D Geometry View")
-
-    End Sub
-
-    Private Sub btnLoad_Click(sender As Object, e As EventArgs) Handles btnLoadG.Click
-        Try
-            Dim f = Application.StartupPath + "\test.avl"
-            txt3.Text = File.ReadAllText(f)
-        Catch ex As Exception
-            MsgBox("Error: " + ex.Message)
-        End Try
-
-    End Sub
-
     Private Sub AVLTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AVLTemplateToolStripMenuItem.Click
         Dim f = rootPath + "\template_avl.txt"
         Dim val = File.ReadAllText(f)
@@ -321,29 +271,6 @@ Public Class frmGeometry
         txt3.Text = ""
     End Sub
 
-    Private Sub btnTrefftz_Click(sender As Object, e As EventArgs) Handles btnTrefftz.Click
-        Dim f = Application.StartupPath + "\test.avl"
-        With frmMain
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine()
-            .p.StandardInput.WriteLine("load " + f)
-            .p.StandardInput.WriteLine("oper")
-            .p.StandardInput.WriteLine("x")
-            .p.StandardInput.WriteLine("t")
-            '.p.StandardInput.WriteLine("h")
-            '.p.StandardInput.WriteLine()
-            '.p.StandardInput.WriteLine()
-        End With
-        'Dim plot = Application.StartupPath + "\plot.ps"
-
-        CaptureApplication("PltLib", "Trefftz plane")
-
-    End Sub
 
     Public Sub CaptureApplication(ByVal procWindowTitle As String, ByVal caption As String)
         Dim proc As Process = Nothing
@@ -427,17 +354,6 @@ Public Class frmGeometry
 
     Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
         Process.Start(rootPath + "\avl_doc.txt")
-    End Sub
-
-    Private Sub btnSaveView_Click(sender As Object, e As EventArgs) Handles btnSaveView.Click
-        btnSave_Click(sender, e)
-        btnTest_Click(sender, e)
-
-    End Sub
-
-
-    Private Sub txt3_Load(sender As Object, e As EventArgs) Handles txt3.Load
-
     End Sub
 
     Private Sub txt3_TextChanged(sender As Object, e As TextChangedEventArgs) Handles txt3.TextChanged
@@ -734,39 +650,15 @@ Public Class frmGeometry
 
     End Function
 
-    Private Sub btnHide_Click(sender As Object, e As EventArgs) Handles btnHide.Click
 
-    End Sub
 
     Private Sub btnHide_CheckStateChanged(sender As Object, e As EventArgs) Handles btnHide.CheckStateChanged
         lblNote.Visible = btnHide.Checked
     End Sub
 
-    Private Sub btnSaveM_Click(sender As Object, e As EventArgs) Handles btnSaveM.Click
-        Try
-            Dim f = Application.StartupPath + "\test.mass"
-            'MsgBox(TrimAll(txt3.Text))
-            File.WriteAllText(f, TrimAll(txt3.Text))
-        Catch er As Exception
-            MsgBox("Error: " + er.Message)
-            Try
-                frmMain.p.Kill()
-                frmMain.loadConsole()
-            Catch
-            End Try
-        End Try
 
-    End Sub
 
-    Private Sub btnLoadM_Click(sender As Object, e As EventArgs) Handles btnLoadM.Click
-        Try
-            Dim f = Application.StartupPath + "\test.mass"
-            txt3.Text = File.ReadAllText(f)
-        Catch ex As Exception
-            MsgBox("Error: " + ex.Message)
-        End Try
 
-    End Sub
 
     Private Sub MassTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MassTemplateToolStripMenuItem.Click
         Dim f = rootPath + "\template_mass.txt"
@@ -777,30 +669,9 @@ Public Class frmGeometry
 
     End Sub
 
-    Private Sub btnSaveR_Click(sender As Object, e As EventArgs) Handles btnSaveR.Click
-        'Try
-        Dim f = Application.StartupPath + "\test.run"
-        'MsgBox(TrimAll(txt3.Text))
-        File.WriteAllText(f, TrimAll(txt3.Text, f))
-        'Catch er As Exception
-        'MsgBox("Error: " + er.Message)
-        '    Try
-        '        frmMain.p.Kill()
-        '        frmMain.loadConsole()
-        '    Catch
-        '    End Try
-        'End Try
 
-    End Sub
 
-    Private Sub btnLoadR_Click(sender As Object, e As EventArgs) Handles btnLoadR.Click
-        Try
-            Dim f = Application.StartupPath + "\test.run"
-            txt3.Text = File.ReadAllText(f)
-        Catch ex As Exception
-            MsgBox("Error: " + ex.Message)
-        End Try
-    End Sub
+
 
     Private Sub RunTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RunTemplateToolStripMenuItem.Click
         Dim f = rootPath + "\template_run.txt"
@@ -816,9 +687,6 @@ Public Class frmGeometry
         drawAxes()
     End Sub
 
-    Private Sub pxz_Click(sender As Object, e As EventArgs) Handles pxz.Click
-
-    End Sub
 
     Private Sub pxz_MouseDown(sender As Object, e As MouseEventArgs) Handles pxz.MouseDown
         If e.Button = MouseButtons.Left Then
@@ -913,10 +781,6 @@ Ctrl+I - forced AutoIndentChars of current line", vbOKOnly, "Editor Shortcuts")
         drawAxes()
     End Sub
 
-    Private Sub p3d_Click(sender As Object, e As EventArgs) Handles p3d.Click
-
-    End Sub
-
     Private Sub p3d_SizeChanged(sender As Object, e As EventArgs) Handles p3d.SizeChanged
         drawAxes()
     End Sub
@@ -941,7 +805,7 @@ Ctrl+I - forced AutoIndentChars of current line", vbOKOnly, "Editor Shortcuts")
         End If
         Dim s As String = ""
         Dim e1 As Double = (ymax - ymin) / pyz.Width * (e.X - (pyz.Width / 2) - yoffset)
-        Dim t1 As String = "[y: " + String.Format("{0,5:###.0}", Math.Round(e1, 1)) '.ToString("{0,5:###.0}")
+        Dim t1 As String = "[Y: " + String.Format("{0,5:###.0}", Math.Round(e1, 1)) '.ToString("{0,5:###.0}")
         Dim e2 As Double = (zmax - zmin) / pyz.Height * (e.Y - (pyz.Height / 2) - zoffset)
         Dim t2 As String = ", Z: " + String.Format("{0,5:###.0}", Math.Round(-e2, 1)) + "]" '.ToString("0.0") + "]"
         s = t1 + t2
@@ -1485,5 +1349,128 @@ errHandler:
                 pyz.Dock = DockStyle.Fill
 
         End Select
+    End Sub
+
+    Private Sub SaveAVLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnSaveG.Click
+        Try
+            Dim f = Application.StartupPath + "\test.avl"
+            'MsgBox(TrimAll(txt3.Text))
+            File.WriteAllText(f, TrimAll(txt3.Text))
+        Catch er As Exception
+            MsgBox("Error: " + er.Message)
+            Try
+                frmMain.p.Kill()
+                frmMain.loadConsole()
+            Catch
+            End Try
+        End Try
+    End Sub
+
+    Private Sub LoadAVLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnLoadG.Click
+        Try
+            Dim f = Application.StartupPath + "\test.avl"
+            txt3.Text = File.ReadAllText(f)
+        Catch ex As Exception
+            MsgBox("Error: " + ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub SaveMassToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnSaveM.Click
+        Try
+            Dim f = Application.StartupPath + "\test.mass"
+            'MsgBox(TrimAll(txt3.Text))
+            File.WriteAllText(f, TrimAll(txt3.Text))
+        Catch er As Exception
+            MsgBox("Error: " + er.Message)
+            Try
+                frmMain.p.Kill()
+                frmMain.loadConsole()
+            Catch
+            End Try
+        End Try
+    End Sub
+
+    Private Sub LoadMassToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnLoadM.Click
+        Try
+            Dim f = Application.StartupPath + "\test.mass"
+            txt3.Text = File.ReadAllText(f)
+        Catch ex As Exception
+            MsgBox("Error: " + ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub SaveRunToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnSaveR.Click
+        'Try
+        Dim f = Application.StartupPath + "\test.run"
+        'MsgBox(TrimAll(txt3.Text))
+        File.WriteAllText(f, TrimAll(txt3.Text, f))
+        'Catch er As Exception
+        'MsgBox("Error: " + er.Message)
+        '    Try
+        '        frmMain.p.Kill()
+        '        frmMain.loadConsole()
+        '    Catch
+        '    End Try
+        'End Try
+    End Sub
+
+    Private Sub LoadRunToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnLoadR.Click
+        Try
+            Dim f = Application.StartupPath + "\test.run"
+            txt3.Text = File.ReadAllText(f)
+        Catch ex As Exception
+            MsgBox("Error: " + ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TrefftzPlaneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnTrefftz.Click
+        Dim f = Application.StartupPath + "\test.avl"
+        With frmMain
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine("load " + f)
+            .p.StandardInput.WriteLine("oper")
+            .p.StandardInput.WriteLine("x")
+            .p.StandardInput.WriteLine("t")
+            '.p.StandardInput.WriteLine("h")
+            '.p.StandardInput.WriteLine()
+            '.p.StandardInput.WriteLine()
+        End With
+        'Dim plot = Application.StartupPath + "\plot.ps"
+
+        CaptureApplication("PltLib", "Trefftz plane")
+    End Sub
+
+    Private Sub GeometryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnTest.Click
+        'btnSave_Click(sender, e)
+        Dim f = Application.StartupPath + "\test.avl"
+        With frmMain
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine()
+            .p.StandardInput.WriteLine("load " + f)
+            .p.StandardInput.WriteLine("oper")
+            .p.StandardInput.WriteLine("g")
+            '.p.StandardInput.WriteLine("k")
+            'SendKeys.Send("LLL")
+        End With
+
+        CaptureApplication("PltLib", "3D Geometry View")
+    End Sub
+
+    Private Sub SaveAVLTheShowGeometryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnSaveView.Click
+        btnSaveG.PerformClick()
+        btnTest.PerformClick()
     End Sub
 End Class

@@ -3,7 +3,6 @@ Imports System.IO
 Imports System.Reflection
 Imports System.ComponentModel
 
-
 Public Class frmMain
     Public p As Process
     Private Leaving As Boolean
@@ -15,6 +14,7 @@ Public Class frmMain
     Public appUpdated As Boolean = False
     Public curApp = "avl"
     Public firstLoad As Boolean = False
+    Public Shared systemFont As Font = New Font("Consolas", 14)
 
     Private Sub ReadThread()
         Dim rLine As String
@@ -154,6 +154,11 @@ Public Class frmMain
             MsgBox("Error: " + ex.Message)
         End Try
 
+        If (Not My.Settings.appFont Is Nothing) Then
+            systemFont = My.Settings.appFont
+        End If
+
+        SetAllControlsFont(Me.Controls, systemFont)
         firstLoad = True
         'frmGeometry.Show()
     End Sub
@@ -294,8 +299,25 @@ Public Class frmMain
     Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
         fd1.Font = txtLog.Font
         If (fd1.ShowDialog() = DialogResult.OK) Then
-            txtLog.Font = fd1.Font
-            txtCommand.Font = fd1.Font
+            'txtLog.Font = fd1.Font
+            'txtCommand.Font = fd1.Font
+            systemFont = fd1.Font
+            My.Settings.appFont = systemFont
+            My.Settings.Save()
+            SetAllControlsFont(Me.Controls, systemFont)
         End If
     End Sub
+
+    Public Shared Sub SetAllControlsFont(ctrls As Control.ControlCollection, font As Font)
+
+        For Each ctrl As Control In ctrls
+
+            If (Not ctrl.Controls Is Nothing) Then
+                SetAllControlsFont(ctrl.Controls, font)
+            End If
+
+            ctrl.Font = font 'New Font("Impact", ctrl.Font.Size - 4)
+        Next
+    End Sub
+
 End Class
